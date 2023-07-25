@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Integrador</title>
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/bda10808da.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="header__logo">
+        <nav class="nav-top">
+            <div class="menu-container">
+                <i class="material-symbols-outlined">menu</i> Menú
+            </div>
+            <ul>
+                <li><a href="#/home">inicio</a></li>
+                <li><a href="#/create">Alta</a></li>
+                <li><a href="#/contact">contacto</a></li>
+                <li><a href="#/about-us">nosotros</a></li>
+                <li><button id="btnCart">🛒</button></li>
+            </ul>
+        </nav>
+        <img src="/img/logo.png" alt="Juguetería Cósmica">
+    </header>
+    
+    <main>
+
+    </main>
+    <footer>
+        <div class="footer-proyect">
+            <h3>Datos del Proyecto</h3>
+            <p>Proyecto Integrador: "Juguetería Cósmica"</p>
+            <p>Alumno: Leonardo Andrés Rodriguez</p>
+        </div>
+        <div class="footer-links">
+            <h3>Enlaces</h3>
+            <nav>
+                <ul>
+                    <li><a href="#/home">Home</a></li>
+                    <li><a href="#/create">Alta</a></li>
+                    <li><a href="#/contact">Contacto</a></li>
+                    <li><a href="#/about-us">Acerca de nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-copyright">
+            <div class="footer-social-networks">
+                <a href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p>Copyright &copy; Juguetería Cósmica - {{currentYear}}</p>
+            <p>Diseñado por Leonardo Andrés Rodriguez</p>
+        </div>
+    </footer>
+    <div id="modal">
+        <div class="cart-modal-container"></div>
+    </div>
+    <div id="alertCard"></div>
+    <script src="/js/libs/handlebars.min-v4.7.7.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>
