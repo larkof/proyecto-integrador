@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
-import config from '../config.js';
+import DBMongoDB from './DB/MongoDB.js';
 
 const productSchema = mongoose.Schema({
     name: String,
-    price: String,
+    price: Number,
     stock: Number,
     brand: String,
     category: String,
@@ -21,33 +21,12 @@ const ProductsModel = mongoose.model('products', productSchema);
 
 class ProductModelMongoDB {
 
-    static connected = false;
-
-    static async connectDB () {
-        try {
-            // await mongoose.connect('mongodb://127.0.0.1:27017/ecommerce');
-            // await mongoose.connect('mongodb://127.0.0.1/ecommerce');
-            await mongoose.connect(config.MONGODB_CONNECTION_STR, {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-                serverSelectionTimeoutMS: config.MONGODB_TIMEOUT
-            });
-            console.log('Conexión con MongoDB exitosa.');
-            ProductModelMongoDB.connected = true;
-        } catch (error) {
-            console.error(`Error al intentar establecer la conexión con MongoDB. Detalle: ${error.message}`);
-        }
-    }
-
-
-
-
     ////////////////////////////////////////////////////////////////////////////////
     //                              CRUD - C: Create                              //
     ////////////////////////////////////////////////////////////////////////////////`
 
     async createProduct (product) {
-        if (!ProductModelMongoDB.connected) {
+        if (!await DBMongoDB.connectDB()) {
             return {};
         }
         try {
@@ -67,7 +46,7 @@ class ProductModelMongoDB {
     ////////////////////////////////////////////////////////////////////////////////
 
     async getProducts () {
-        if (!ProductModelMongoDB.connected) {
+        if (!await DBMongoDB.connectDB()) {
             return [];
         }
         try {
@@ -81,7 +60,7 @@ class ProductModelMongoDB {
     }
 
     async getProduct (id) {
-        if (!ProductModelMongoDB.connected) {
+        if (!await DBMongoDB.connectDB()) {
             return {};
         }
         try {
@@ -106,7 +85,7 @@ class ProductModelMongoDB {
     ////////////////////////////////////////////////////////////////////////////////`
 
     async updateProduct (id, product) {
-        if (!ProductModelMongoDB.connected) {
+        if (!await DBMongoDB.connectDB()) {
             return {};
         }
         try {
@@ -132,7 +111,7 @@ class ProductModelMongoDB {
     ////////////////////////////////////////////////////////////////////////////////
 
     async deleteProduct (id) {
-        if (!ProductModelMongoDB.connected) {
+        if (!await DBMongoDB.connectDB()) {
             return {};
         }
         try {
