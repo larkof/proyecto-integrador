@@ -14,7 +14,7 @@ class ProductModelMem {
     ////////////////////////////////////////////////////////////////////////////////
 
     async createProduct (product) {
-        product.id = this.getNextId();
+        product._id = this.getNextId();
         this.products.push(product);
         return product;
     }
@@ -28,7 +28,7 @@ class ProductModelMem {
     }
 
     async getProduct (id) {
-        return this.products.find(product => product.id === id) || {};
+        return this.products.find(product => product._id === id) || {};
     };
 
     ////////////////////////////////////////////////////////////////////////////////
@@ -36,11 +36,11 @@ class ProductModelMem {
     ////////////////////////////////////////////////////////////////////////////////
 
     async updateProduct (id, product) {
-        const index = this.products.findIndex(product => product.id === id);
+        const index = this.products.findIndex(product => product._id === id);
         if (index === -1) {
             return {};
         }
-        product.id = id;
+        product._id = id;
         this.products[index] = product;
         return product;
     };
@@ -50,7 +50,7 @@ class ProductModelMem {
     ////////////////////////////////////////////////////////////////////////////////
 
     async deleteProduct (id) {
-        const index = this.products.findIndex(product => product.id === id);
+        const index = this.products.findIndex(product => product._id === id);
         if (index === -1) {
             return {};
         }
