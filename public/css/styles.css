@@ -521,7 +521,9 @@ main {
     border-right: 2px solid var(--timber_wolf_strong);
     width: 95%;
 }
-
+.btn_send{
+    cursor:pointer;
+}
 .btns-form .btn_send.disabled {
     color: var(--Eerie_black_light);
     box-shadow: inset 2px 2px 3px rgba(0, 0, 0, .3);

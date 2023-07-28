@@ -33,9 +33,10 @@ class PageCreate {
     }
 
     static async createProduct(product) {
-        console.log(product)
+        //console.log(product)
         const CreatedProduct = await productController.saveProduct(product)
         PageCreate.loadTable();
+        PageCreate.form.reset();
         return CreatedProduct;
     }
 
