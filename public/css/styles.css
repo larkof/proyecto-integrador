@@ -529,8 +529,39 @@ main {
     border-color: transparent;
 }
 
-.form-create #mainPhotoToy {
+.form-create #mainPhoto {
     display: none;
+}
+
+.products-table-container{
+    width:90%;
+    margin:auto;
+    display:none;
+}
+
+.products-table-container table caption {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.3em;
+    color: var(--black_olive);
+    
+}
+
+.products-table-container table {
+    margin-top: 1em;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.cart-product:hover {
+    background-color: hsl(0, 0%, 97%);
+}
+
+.products-table-container table td {
+    border-top: 2px solid var(--Flame);
+    cursor: pointer;
+    padding: 1em 0;
 }
 
 
@@ -778,7 +809,11 @@ main {
 
 /* breackpoint for iPads, tabletss */
 
-@media (min-width:480px) {}
+@media (min-width:480px) {
+    .products-table-container{
+        display:block;
+    }
+}
 
 
 /* breackpoint for laptops and notebooks */

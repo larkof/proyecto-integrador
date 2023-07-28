@@ -1,7 +1,7 @@
 [
-	{
+		{
 		"name": "Carrera de mente Platinum",
-		"price": "9.199",
+		"price": 9199,
 		"stock": 40,
 		"brand": "",
 		"category": "Juego de mesa",
@@ -15,7 +15,7 @@
 	},
 	{
 		"name": "Con eso no se jode",
-		"price": "3.590",
+		"price": 3590,
 		"stock": 40,
 		"brand": "",
 		"category": "Juego de cartas",
@@ -57,7 +57,7 @@
 	},
 	{
 		"name": "Ni en pedo... Bueno en pedo si",
-		"price": "3.550",
+		"price": 3550,
 		"stock": 40,
 		"brand": "",
 		"category": "Juego de cartas",
@@ -71,7 +71,7 @@
 	},
 	{
 		"name": "No lo testeamos ni un poco",
-		"price": "2.850",
+		"price": 2850,
 		"stock": 40,
 		"brand": "",
 		"category": "Juego de mesa",
@@ -85,7 +85,7 @@
 	},
 	{
 		"name": "TK-BIO",
-		"price": "3.560",
+		"price": 3560,
 		"stock": 40,
 		"brand": "",
 		"category": "Juego de cartas",
@@ -99,7 +99,7 @@
 	},
 	{
 		"name": "T-Rex",
-		"price": "30.750",
+		"price": 30750,
 		"stock": 40,
 		"brand": "",
 		"category": "Disfraz",
@@ -113,7 +113,7 @@
 	},
 	{
 		"name": "Santa Claus",
-		"price": "7.224",
+		"price": 7224,
 		"stock": 40,
 		"brand": "",
 		"category": "Disfraz",
@@ -127,7 +127,7 @@
 	},
 	{
 		"name": "Infantiles nfantiles",
-		"price": "5.580",
+		"price": 5580,
 		"stock": 40,
 		"brand": "",
 		"category": "Disfraz",
@@ -141,7 +141,7 @@
 	},
 	{
 		"name": "Pala mecánica",
-		"price": "9.990",
+		"price": 9990,
 		"stock": 40,
 		"brand": "",
 		"category": "Juego para armar",
@@ -155,7 +155,7 @@
 	},
 	{
 		"name": "Tanqueta",
-		"price": "5.500",
+		"price": 5500,
 		"stock": 40,
 		"brand": "",
 		"category": "Juego para armar",
@@ -169,7 +169,7 @@
 	},
 	{
 		"name": "Playmobil Ghostbusters Marshmallow",
-		"price": "2.500",
+		"price": 2500,
 		"stock": 40,
 		"brand": "",
 		"category": "Muñeco",
@@ -183,7 +183,7 @@
 	},
 	{
 		"name": "Playmobil Unidad de rescate - Bomberos",
-		"price": "25.000",
+		"price": 25000,
 		"stock": 40,
 		"brand": "",
 		"category": "Muñeco",
@@ -197,7 +197,7 @@
 	},
 	{
 		"name": "Joypad Retro tipo Snes",
-		"price": "12.500",
+		"price": 12500,
 		"stock": 40,
 		"brand": "",
 		"category": "Video Games",
@@ -211,7 +211,7 @@
 	},
 	{
 		"name": "Joystick retro tipo Arcade",
-		"price": "20.600",
+		"price": 20600,
 		"stock": 40,
 		"brand": "",
 		"category": "Video Games",
@@ -227,7 +227,7 @@
 		"name": "Nintendo Switch Oled",
 		"shortDescription": "Con tu consola Switch tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos.",
 		"category": "Video Games",
-		"price": "306.500",
+		"price": 306500,
 		"stock": 40,
 		"brand": "",
 		"longDescription": "",
@@ -239,7 +239,7 @@
 	},
 	{
 		"name": "Pandora Box X Plus",
-		"price": "38.200",
+		"price": 38200,
 		"stock": 40,
 		"brand": "",
 		"category": "Video Games",
@@ -253,7 +253,7 @@
 	},
 	{
 		"name": "Playstation 5",
-		"price": "439.999",
+		"price": 439999,
 		"stock": 40,
 		"brand": "",
 		"category": "Video Games",
@@ -267,7 +267,7 @@
 	},
 	{
 		"name": "X-Box Series X",
-		"price": "379.999",
+		"price": 379999,
 		"stock": 40,
 		"brand": "",
 		"category": "Video Games",

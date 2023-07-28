@@ -14,8 +14,9 @@ class Http {
         try {
             return await fetch(url, {
                 method: 'post',
-                body: JSON.stringify(dato),
-                headers: { 'content-type': 'application/json' }
+                body: dato,
+                // body: JSON.stringify(dato),
+                // headers: { 'content-type': 'application/json' }
             }).then(r => r.json());
         } catch (error) {
             console.error('ERROR POST', error);

@@ -7,20 +7,23 @@
                 <th scope="column">Nombre</th>
                 <th scope="column">Precio</th>
                 <th scope="column">Descripción</th>
-                <th scope="column">Acciones</th>
+                <th colspan="2"scope="column">Acciones</th>
             </tr>
         </thead>
         <tbody>
             {{#each products}}
                 <tr>
-                    <td data-product-property="_id">{{_id}}</td>
-                    <td data-product-property="name">{{name}}</td>
-                    <td data-product-property="price">{{price}}</td>
-                    <td data-product-property="shortDescription">{{shortDescription}}</td>
-                    <td>
-                        <button class="btn-edit" title="Editar producto">Editar</button>
-                        <button class="btn-delete" title="Eliminar producto">Eliminar</button>
+                    <td data-id="{{_id}}">{{shortId}}</td>
+                    <td contenteditable="true" data-product-property="name">{{name}}</td>
+                    <td contenteditable="true" data-product-property="price">{{price}}</td>
+                    <td contenteditable="true" data-product-property="shortDescription">{{shortDescription}}</td>
+                    <td title="Editar producto">
+                        <i class="btn-edit material-symbols-outlined">stylus_note</i>
                     </td>
+                    <td title="Eliminar producto">
+                        <i class="btn-delete material-symbols-outlined btn-cart-product__del">delete</i>
+                    </td>
+
                 </tr>
             {{/each}}
         </tbody>

@@ -1,14 +1,16 @@
 import express from 'express';
+import fileUpload from 'express-fileupload';
 import routerProducts from './routers/products.js';
 // import ProductModelMongoDB from './models/products-mongodb.js';
 import config from './config.js';
+
 
 // await ProductModelMongoDB.connectDB();
 // ProductModelMongoDB.connectDB();
 
 const app = express();
 const PORT = config.PORT;
-
+app.use(fileUpload());
 app.use(express.static('public', { extensions: ['html', 'htm'] }));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());

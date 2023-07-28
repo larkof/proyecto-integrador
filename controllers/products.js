@@ -19,8 +19,25 @@ const getProduct = async (req, res) => {
 
 const postProduct = async (req, res) => {
     const product = req.body;
-    const createdProduct = await api.createProduct(product);
-    res.json(createdProduct);
+    product.price = Number(product.price); 
+    product.stock = Number(product.stock); 
+    product.ageFrom = Number(product.ageFrom); 
+    product.ageUpTo = Number(product.ageUpTo);
+    product.freeShipping = (product.freeShipping==="on") ? true : false;
+
+    const image = req.files.mainPhoto;
+    const uploadPath = './public/img/products/' + image.name;
+    product.mainPhoto = image.name;
+    console.log(product);
+    console.log(image);
+    console.log(uploadPath)
+
+    image.mv(uploadPath, async function(err) {
+        if (err){
+            return res.status(500).send(err);}
+        const createdProduct = await api.createProduct(product);
+        res.json(createdProduct);
+    });
 };
 
 ///////////////////////////////////////////////////////////////////////////////

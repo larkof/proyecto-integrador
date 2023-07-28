@@ -14,6 +14,7 @@ class ProductController {
     async getProducts() {
         console.log('getProducts:');
         const products = await productService.getProducts();
+        products.forEach(product => { product.shortId = product._id.slice(-5)});
         return products;
     }
 

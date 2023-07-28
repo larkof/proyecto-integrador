@@ -1,6 +1,109 @@
 <h1>Alta de Productos</h1>
 
-<section class="section-products-table">
-    <h2>Listado de productos</h2>
-    <div class="products-table-container"></div>
-</section>
+<h2>Complete los datos del producto</h2>
+<form class="form-create">
+    <div class="label name">
+        <label for="name">* Nombre: (Obligtorio)</label>
+        <input type="text" minlength="2" maxlength="70" autofocus required placeholder="Escriba Nombre del Producto"
+                class="data-required" name="name" id="name">
+        <i class="material-symbols-outlined"></i>
+        <span class="d-none">Debe ingresar un nombre al producto entre 2 y 70 caracteres.</span>
+    </div>
+    <div class="label price">
+        <label for="price">* Precio: (Obligtorio)</label>
+        <input type="number" min="0" class="data-required" required name="price" id="price">
+        <i class="material-symbols-outlined"></i>
+        <span class="d-none">Debe ingresar el importe con números positívos.</span>
+    </div>
+    <div class="label stock">
+        <label for="stock">* Cantidad: (Obligatorio)</label>
+        <input type="number"  required min="0" class="data-required" name="stock" id="stock">
+        <i class="material-symbols-outlined"></i>
+        <span class="d-none">Debe ingresar el stock con números positívos.</span>
+    </div>
+    <div class="label brand">
+        <label for="brand">* Marca: (Obligatorio)
+        <input list="brand" name="brand" class="data-required" placeholder="Seleccione una Marca"></label>
+        <datalist  id="brand" >
+            <option value="BANDAI">
+            <option value="HASBRO">
+            <option value="MATTEL">
+            <option value="STEAM">
+            <option value="PLAYSTATION">
+            <option value="MICROSOFT">
+            <option value="RUIBAL">
+            <option value="Ipa´s">
+            <option value="Pandora">
+            <option value="1Buró">
+        </datalist>
+        <i class="material-symbols-outlined"></i>
+        <span class="d-none">Debe seleccionar una marca.</span>
+    </div>
+    <div class="label category">
+        <label for="category">* Categoría: (Obligatorio)
+        <input list="category"  name="category" class="data-required"placeholder="Seleccione una Marca"></label>
+        <datalist id="category">
+            <option value="Figuras de acción">
+            <option value="electrónica">
+            <option value="Video Games">
+            <option value="Juegos de Mesa">
+            <option value="Pistas y vehículos">
+            <option value="Rodados">
+            <option value="Libros y comics">
+            <option value="Ladrillos y Bloques">
+            <option value="Didácticos">
+            <option value="Disfraces">
+        </datalist>
+        <i class="material-symbols-outlined"></i>
+        <span class="d-none">Debe seleccionar una categoría.</span>
+    </div>
+    <div class="label shortDescription">
+        <label for="shortDescription">* Descripción Corta: (Obligatorio)</label>
+        <textarea name="shortDescription" id="shortDescription" cols="30" rows="3" required minlength="10"        
+                    maxlength="200" class="data-required"></textarea>
+        <i class="material-symbols-outlined"></i>
+        <span class="d-none">Debe escribir una descripción corta entre 10 y 200 caracteres.</span>
+    </div>
+    <div class="label longDescription">
+        <label for="longDescription">* Descripción: (Obligatorio)</label>
+        <textarea name="longDescription" id="longDescription" cols="30" rows="6" required minlength="10" 
+                    maxlength="2000" class="data-required"></textarea>
+        <i class="material-symbols-outlined"></i>
+        <span class="d-none">Debe escribir una descripción entre 10 y 2000 caracteres.</span>
+    </div>
+    <div class="checked-container">
+        <label for="freeShipping"><i class="material-symbols-outlined checked-btn">indeterminate_check_box</i> 
+                Envío sin cargo
+        </label>
+        <input type="checkbox" name="freeShipping" id="freeShipping">
+    </div>
+    <h3>Edades</h3>
+    <div class="form-age">
+        <div class="label">
+            <label for="rangeUnit">Rango: </label>
+            <select name="rangeUnit" id="rangeUnit">
+                <option value="años">Años</option>
+                <option value="meses">Meses</option>
+            </select>
+            <span class="">Seleccione si el rango es entre años o meses.</span>
+        </div>
+        <div class="label ageFrom">
+            <label for="ageFrom">* Desde:</label>
+            <input type="number" name="ageFrom" id="ageFrom" required min="0" max="100" class="data-required">
+            <i class="material-symbols-outlined"></i>
+            <span class="d-none">Debe escribir un número del 0 al 100 (sin decimales).</span>
+        </div>
+        <div class="label ageUpTo">
+            <label for="ageUpTo">* Hasta:</label>
+            <input type="number" name="ageUpTo" id="ageUpTo" required min="0" max="100" class="data-required">
+            <i class="material-symbols-outlined"></i>
+            <span class="d-none">Debe escribir un número del 0 al 100 (sin decimales).</span>
+        </div>
+    </div>
+    <div class="btns-form">
+        <label class="btn-photo-toy" for="mainPhoto">--- Cargue una imagen ---</label>
+        <input type="file" accept="image/*" name="mainPhoto" id="mainPhoto" required class="data-required">
+        <input class="btn_send disabled" value="Enviar">
+    </div>
+</form>
+<div class="products-table-container"></div>
