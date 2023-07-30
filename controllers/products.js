@@ -1,4 +1,5 @@
 import api from '../api/products.js';
+import fs from "fs";
 
 ////////////////////////////////////////////////////////////////////////////////
 //                                 GET Controller                             //
@@ -26,12 +27,9 @@ const postProduct = async (req, res) => {
     product.freeShipping = (product.freeShipping==="on") ? true : false;
 
     const image = req.files.mainPhoto;
-    const uploadPath = './public/img/products/' + image.name;
-    product.mainPhoto = image.name;
-    console.log(product);
-    console.log(image);
-    console.log(uploadPath)
-
+    const imageName = Date.parse(Date())+image.name.slice(image.name.lastIndexOf("."));
+    const uploadPath = './public/img/products/' +imageName;
+    product.mainPhoto = imageName;
     image.mv(uploadPath, async function(err) {
         if (err){
             return res.status(500).send(err);}
@@ -58,6 +56,7 @@ const putProduct = async (req, res) => {
 const deleteProduct = async (req, res) => {
     const id = req.params.id;
     const deletedProduct = await api.deleteProduct(id);
+    fs.unlinkSync('./public/img/products/'+ deletedProduct.mainPhoto)
     res.json(deletedProduct);
 };
 
